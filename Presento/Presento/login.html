@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Josefin+Sans|Ubuntu");
+      @import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+      body {
+        /*background: url("rec_blur.png");*/
+        background-color: white;
+      }
+      .div1 {
+        align-items: center;
+        display: block;
+        /*position: absolute;*/
+        position: absolute;
+        top: 20%;
+        left: 22%;
+        background-color: whitesmoke;
+        height: 60%;
+        width: 55%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px 10px #545454;
+      }
+      .form {
+        float: left;
+        width: 100%;
+      }
+      #UN {
+        height: 1.875rem;
+        border: none;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        background-color: transparent;
+        outline: none;
+        width: 15.625rem;
+      }
+      #PW {
+        height: 1.875rem;
+        border: none;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+        background-color: transparent;
+        outline: none;
+        width: 15.625rem;
+      }
+      #button2 {
+        background-color: #9132a8;
+        border: none;
+        border-radius: 4px;
+        width: 5rem;
+        height: 2rem;
+      }
+      #button3 {
+        background-color: #9132a8;
+        border: none;
+        border-radius: 4px;
+        width: 5rem;
+        height: 2rem;
+      }
+      #button2:hover {
+        background-color: #9d72b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1" id="myForm">
+      <div class="form">
+        <form action="/" method="POST">
+          <label
+            style="
+              color: #9132a8;
+              display: block;
+              text-align: center;
+              font-family: Ubuntu;
+              font-weight: bold;
+              font-size: 2rem;
+              margin-top: 8%;
+            "
+            >Login
+          </label>
+          <center>
+            <div style="margin: 0 auto">
+              <div style="font-size: 1.25rem; margin-top: 10%">
+                <i class="fa fa-user icon w3-xlarge"></i>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="UN"
+                  id="UN"
+                  required
+                />
+              </div>
+
+              <div style="font-size: 1.25rem; margin-top: 5%">
+                <i class="fa fa-key icon"></i>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="PW"
+                  id="PW"
+                  required
+                />
+              </div>
+              <br /><br />
+              <div style="margin-left: 5%">
+                <button name="button2" id="button2">Login</button>
+                <button
+                  name="button3"
+                  id="button3"
+                  onclick="closeform()"
+                  style="margin-left: 10%"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </center>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
