@@ -1,0 +1,48 @@
+.navbar img{
+    height: 40px;
+    margin: 4px;
+    width: 100px;
+}
+
+.carousel-item{
+    height: 32rem;
+    background: #777;
+    color: black;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-item .container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.job-field{
+    margin-top: 2%;
+}
+
+.job-field-padding{
+
+padding:5px;
+}
+.submit-button{
+    float: right;
+
+}
+
