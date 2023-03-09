@@ -1,0 +1,40 @@
+#right column of top section
+
+<div
+            class="col-md-5 col-sm-5 hidden-xs"
+            style="position: relative; z-index: -1"
+          >
+            <div class="hero-illustration" style="position: relative">
+              <img
+                loading="lazy"
+                src="img/website-hero-bg.svg"
+                class="img-responsive animate__animated animate__fadeIn"
+                style="position: absolute; z-index: -2"
+              />
+              <div class="flexbox" style="width: 110%">
+                <div class="px-10 pl-20">
+                  <img
+                    loading="lazy"
+                    src="img/hero-person-1.png"
+                    class="img-responsive animate__animated animate__slideInDown"
+                  />
+                  <img
+                    loading="lazy"
+                    src="img/hero-person-3.svg"
+                    class="img-responsive animate__animated animate__slideInUp"
+                  />
+                </div>
+                <div class="pt-80">
+                  <img
+                    loading="lazy"
+                    src="img/hero-person-2.svg"
+                    class="img-responsive animate__animated animate__slideInRight"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          ##################
+          
