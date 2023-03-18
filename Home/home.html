@@ -47,7 +47,7 @@
               <a href="#" class="nav-link">Student Portal</a>
             </li>
             <li class="nav-item active">
-              <a href="#" class="nav-link">Offcial Webpage</a>
+              <a href="#" class="nav-link" onclick="showPopup()">Offcial Webpage</a>
             </li>
             <!--
             <li class="nav-item dropdown">
@@ -76,7 +76,7 @@
         </div>
       </div>
     </nav>
-    <dialog class="my-modal">
+    <dialog class="my-modal" id="dialog">
         <h3>Who are you?</h3>
         <button class="dialog-button" onclick="window.location.href='login.html';">Student</button>
         <button class="dialog-button">TPO</button>
@@ -84,7 +84,14 @@
         <br>
         <br>
         <a href="" style="text-decoration:none ; float: right;" class="close-button"><b>Go Back</b></a>
-    </dialog style="margin-top: 74px;">
+    </dialog>
+    <!--added content-->
+    <div id="popup">
+        <h2>This is a Popup</h2>vai da ngotha...vanthu oombu...by your bestest friend ga(vi)jay
+        <p>Here is some content.</p>
+        <button onclick="hidePopup()">Close</button>
+      </div>
+    <!--added content ended-->
     <section id="top" style="margin-top: 74px">
       <div class="container">
         <div class="row">
