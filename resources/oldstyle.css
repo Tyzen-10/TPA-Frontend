@@ -1,5 +1,3 @@
-
-
 body{
 
     background-color: rgb(245, 205, 104);
@@ -28,6 +26,8 @@ body{
     padding: 50px 35px 10px 35px;
     min-width: 330px;
     box-sizing: content-box;
+    margin: auto;
+    min-width: 50%;
 }
 
 .my-container header{
