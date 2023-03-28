@@ -125,6 +125,8 @@ form .my-page .my-btns button.my-next{
 .my-container .my-progress-bar{
     display: flex;
     margin: 40px 0;
+    max-width: 330px;
+    margin: auto;
 }
 .my-container .my-progress-bar .my-step{
     position: relative;
@@ -208,3 +210,8 @@ form .my-page .my-btns button.my-next{
     display: block;
     color: #fff;
 }
+
+/*comments
+1. changed progress bar max-wwidth set to 330px and margin : auto
+2. changed form width to 50 % and centered using margin : auto
+*/
