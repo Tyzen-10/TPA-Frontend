@@ -63,3 +63,75 @@ padding:5px;
     font-size: 13px;
     
 }
+/*for job creation page --added 30 March */
+.small-div{
+    box-sizing: border-box;
+    width: 75%;
+    margin: auto;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+.small-div input[type=submit]{
+    padding: 0.5rem;
+    width: 25%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    background: #71b7e6;
+    border-radius: 5px;
+    color: #fff;
+    color: #000;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.small-div input[type=submit]:hover{
+    background: #000;
+    color: #fff;
+}
+
+.small-div input[type=text]{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+.small-div input[type=number]{
+    display: inline;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;  
+}
+.small-div input[type=radio]{
+    margin: 1rem;
+}
+.small-div input[type=checkbox]{
+    margin: 1rem;
+}
+.small-div label{
+    font-weight: 500;
+}
+.small-div hr{
+    color: purple;
+}
+.container-lg .text-center{
+    background-color: lightgoldenrodyellow;
+}
+.my-label{
+    font-weight: 600;
+    font-size: 14px;
+    /*font-size : 1.6rem; */
+    color: rgb(40, 44, 63);
+    line-height: 2rem;
+    font-family: Lato, Roboto, sans-serif;
+}
+.space-above{
+    margin-top: 0.5rem;
+}
