@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,15 +11,16 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link href="{% static 'students/style.css' %}" rel="stylesheet" />
+    <link rel="stylesheet" href="/resources/oldstyle.css">
+    <link rel="stylesheet" href="/resources/style.css">
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light ">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
       <div class="container">
-        <a href="#" class="navbar-brand mb-0 h1" >
+        <a href="#" class="navbar-brand mb-0 h1">
           <img
             class="d-inline-block align-top"
-            src="{% static 'students/logo1.png' %}"
+            src="/resources/logo.png"
             width="40"
             height="30"
           />
@@ -39,27 +39,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a href="{% url 'stuHome' %}" class="nav-link" style="color:white;">Home</a>
+              <a href="#" class="nav-link active">Home</a>
             </li>
             <li class="nav-item active">
-              <a href="#" class="nav-link" style="color:white;">Jobs</a>
+              <a href="#" class="nav-link">Jobs</a>
             </li>
             <li class="nav-item active">
-              <a href="#" class="nav-link" style="color:white;">Resume Builder</a>
+              <a href="#" class="nav-link">Resume Builder</a>
             </li>
             <li class="nav-item dropdown">
               <a
                 href="#"
-                class="nav-link dropdown-toggle active"
+                class="nav-link dropdown-toggle"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style="color:white;">Profile</a
+                >Profile</a
               >
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a href="{% url 'stuDet' %}" class="dropdown-item">Add Profile Details</a></li>
-                <li><a href="{% url 'viewUserDet' %}" class="dropdown-item">View Profile</a></li>
+                <li><a href="#" class="dropdown-item">Edit Profile</a></li>
+                <li><a href="#" class="dropdown-item">Sign out</a></li>
               </ul>
             </li>
           </ul>
@@ -68,16 +68,16 @@
     </nav>
 
     <div
-      class="container"
-      style="margin-top: 74px; background-color: antiquewhite"
+      class="container view-profile-center-div"
     >
-      <h1>Your Profile</h1>
+      <h1>Venkatesan's Profile</h1>
       <section>
-        <h2>Basic Info</h2>
+        <div class="profile-mini">
+          <h2>Basic Info</h2>
         <hr />
         <table class="table table-borderless">
           <tbody>
-            {% for count in stu_detail %}
+            
             <tr>
               <th scope="row">Full Name</th>
               <td>{{ count.fname }}</td>
@@ -124,10 +124,12 @@
             </tr>
           </tbody>
         </table>
+        </div>
       </section>
       <!--section2-->
       <section>
-        <h2>Personal Information</h2>
+        <div class="profile-mini">
+          <h2>Personal Information</h2>
         <hr />
         <table class="table table-borderless">
           <tbody>
@@ -192,10 +194,12 @@
             </tr>
           </tbody>
         </table>
+        </div>
       </section>
       <!--section 3-->
       <section>
-        <h2>Educational Details</h2>
+        <div class="profile-mini">
+          <h2>Educational Details</h2>
         <hr />
         <table class="table table-borderless">
           <tbody>
@@ -291,10 +295,12 @@
             
           </tbody>
         </table>
+        </div>
       </section>
       <!--section 4-->
       <section>
-        <h2>Other Information</h2>
+        <div class="profile-mini">
+          <h2>Other Information</h2>
         <hr />
         <table class="table table-borderless">
           <tbody>
@@ -325,8 +331,8 @@
             </tr>
           </tbody>
           
-          {% endfor %}
         </table>
+        </div>
       </section>
     </div>
 
@@ -337,3 +343,10 @@
     ></script>
   </body>
 </html>
+
+
+
+<!--Comments
+1. Added a div inside every section and put all table codes there.
+2. Styling for that div done in style.css 
+-->
