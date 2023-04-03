@@ -333,3 +333,37 @@
     <script src="home.js"></script>
   </body>
 </html>
+
+
+
+<!--code for proper pop-up div
+<div id="outer-div" style="position: relative; width: 300px; height: 200px; background-color: lightgray;">
+  <button id="inner-div-toggle" style="position: absolute; top: 10px; left: 10px;">Toggle Inner Div</button>
+  <div id="inner-div" style="display: none; position: absolute; top: 50px; left: 50px; width: 200px; height: 100px; background-color: white; border: 1px solid black;">
+    <p>This is the inner div.</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var outerDiv = document.getElementById("outer-div");
+    var innerDiv = document.getElementById("inner-div");
+    var toggleButton = document.getElementById("inner-div-toggle");
+    
+    toggleButton.addEventListener("click", function() {
+      if (innerDiv.style.display === "none") {
+        innerDiv.style.display = "block";
+      } else {
+        innerDiv.style.display = "none";
+      }
+    });
+    
+    outerDiv.addEventListener("click", function(event) {
+      if (!innerDiv.contains(event.target) && event.target !== toggleButton) {
+        innerDiv.style.display = "none";
+      }
+    });
+  });
+</script>
+
+-->

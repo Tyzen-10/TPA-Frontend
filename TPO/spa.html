@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Performance Analyzer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/resources/oldstyle.css" />
+    <link rel="stylesheet" href="/resources/style.css" />
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a href="#" class="navbar-brand mb-0 h1">
+          <img
+            class="d-inline-block align-top"
+            src="/resources/logo.png"
+            width="40"
+            height="30"
+          />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a href="#" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a href="#" class="nav-link">Jobs</a>
+            </li>
+            <li class="nav-item active">
+              <a href="#" class="nav-link">Resume Builder</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Profile</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a href="#" class="dropdown-item">Edit Profile</a></li>
+                <li><a href="#" class="dropdown-item">Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 id="spa-heading" style="margin-top: 100px">
+      Placement Performance Analyzer
+    </h1>
+    <div class="container spa-center">
+      <!--current stats-->
+      <section id="spa-01">
+        <div class="spa-mini">
+          <h2>Current Placement Performance</h2>
+          <div class="spa-cardbox">
+            <div class="spa-card">
+              <div>
+                <div class="spa-numbers">1504</div>
+                <div class="spa-cardname">Total Students</div>
+              </div>
+              <div class="spa-iconBx">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="spa-card">
+              <div>
+                <div class="spa-numbers">800</div>
+                <div class="spa-cardname">General Placed</div>
+              </div>
+              <div class="spa-iconBx">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="spa-card">
+              <div>
+                <div class="spa-numbers">400</div>
+                <div class="spa-cardname">Dream Placed</div>
+              </div>
+              <div class="spa-iconBx">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+            </div>
+            <div class="spa-card">
+              <div>
+                <div class="spa-numbers">304</div>
+                <div class="spa-cardname">SuperDream Placed</div>
+              </div>
+              <div class="spa-iconBx">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="spa-02">
+        <div class="spa-mini">
+          <h2>Comparison</h2>
+          <div class="spa-graphbox">
+            <div class="spa-box">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="spa-box">
+              <canvas id="myCompare"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="spa-03">
+        <div class="spa-mini">
+          <h2>Prediction</h2>
+          <div class="spa-pred">
+            <div class="spa-pred-mini">
+              <input type="file" name="" id="csv-file-btn" />
+            </div>
+            <div class="spa-pred-mini">
+              <div>
+                <div class="spa-pred-mini-number">1504</div>
+                <div class="spa-pred-mini-name">
+                  Total students - 2024 Batch
+                </div>
+              </div>
+            </div>
+            <div class="spa-pred-mini">
+              <div>
+                <div class="spa-pred-mini-number">1200</div>
+                <div class="spa-pred-mini-name">2024 Batch - Forecast</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!--for chart.js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="spa.js"></script>
+  </body>
+</html>
