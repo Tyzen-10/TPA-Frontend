@@ -1,0 +1,150 @@
+********* Code until new project divs can be added and info can be typed inside it.*********
+<style>
+  .right {
+    /* styles for the right div, if any */
+  }
+  .right-mini {
+    /* styles for the right-mini div, if any */
+  }
+  .proj-name, .proj-desc {
+    border: 2px solid black;
+    min-height: 25px;
+    /* additional styles for the proj-name and proj-desc divs, if any */
+  }
+  .input-wrapper {
+    display: none; /* hide the input by default */
+  }
+</style>
+
+<div class="right">
+  <button class="add-mini-btn">Add New Project</button>
+</div>
+
+<script>
+  const rightDiv = document.querySelector('.right');
+  const addMiniBtn = document.querySelector('.add-mini-btn');
+
+  addMiniBtn.addEventListener('click', () => {
+    // create a new right-mini div and append it to the right div
+    const newRightMini = document.createElement('div');
+    newRightMini.classList.add('right-mini');
+    newRightMini.innerHTML = `
+      <div class="proj-name">
+        <span class="label">Project Name: </span>
+        <span class="text">Click the button to add a name</span>
+        <button class="edit-btn">Edit</button>
+        <div class="input-wrapper">
+          <input type="text" class="input-field" placeholder="Enter project name">
+          <button class="save-btn">Save</button>
+        </div>
+      </div>
+      <div class="proj-desc">
+        <!-- contents of proj-desc div -->
+      </div>
+    `;
+    rightDiv.appendChild(newRightMini);
+
+    // add event listeners to the new right-mini div's edit and save buttons
+    const editBtn = newRightMini.querySelector('.edit-btn');
+    const inputWrapper = newRightMini.querySelector('.input-wrapper');
+    const inputField = newRightMini.querySelector('.input-field');
+    const projNameText = newRightMini.querySelector('.proj-name .text');
+    const saveBtn = newRightMini.querySelector('.save-btn');
+
+    editBtn.addEventListener('click', () => {
+      projNameText.style.display = 'none'; // hide the original text
+      inputWrapper.style.display = 'inline-block'; // show the input field
+    });
+
+    saveBtn.addEventListener('click', () => {
+      const projectName = inputField.value;
+      projNameText.textContent = projectName; // set the text content of proj-name div
+      inputWrapper.style.display = 'none'; // hide the input field
+      projNameText.style.display = 'inline-block'; // show the new text
+    });
+  });
+</script>
+**********************************************************
+code to add and delete sections
+************************************
+<div class="right">
+  <button class="add-mini-btn">Add New Project</button>
+    <button class="delete-mini-btn">Delete Latest Project</button>
+</div>
+
+.right {
+    /* styles for the right div, if any */
+  }
+  .right-mini {
+    /* styles for the right-mini div, if any */
+  }
+  .proj-name, .proj-desc {
+    border: 2px solid black;
+    min-height: 25px;
+    /* additional styles for the proj-name and proj-desc divs, if any */
+  }
+  .input-wrapper {
+    display: none; /* hide the input by default */
+  }
+   .proj-name {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .proj-desc {
+    font-size: 14px;
+  }
+
+<script>
+const rightDiv = document.querySelector('.right');
+  const addMiniBtn = document.querySelector('.add-mini-btn');
+  const deleteMiniBtn = document.querySelector('.delete-mini-btn');
+  let rightMinis = []; // an array to store all the right-mini divs
+
+  addMiniBtn.addEventListener('click', () => {
+    // create a new right-mini div and append it to the right div
+    const newRightMini = document.createElement('div');
+    newRightMini.classList.add('right-mini');
+    newRightMini.innerHTML = `
+      <div class="proj-name">
+        <span class="label">Project Name: </span>
+        <span class="text">Click the button to add a name</span>
+        <button class="edit-btn">Edit</button>
+        <div class="input-wrapper">
+          <input type="text" class="input-field" placeholder="Enter project name">
+          <button class="save-btn">Save</button>
+        </div>
+      </div>
+      <div class="proj-desc">
+        <!-- contents of proj-desc div -->
+      </div>
+    `;
+    rightDiv.appendChild(newRightMini);
+    rightMinis.push(newRightMini); // add the new right-mini to the rightMinis array
+
+    // add event listeners to the new right-mini div's edit and save buttons
+    const editBtn = newRightMini.querySelector('.edit-btn');
+    const inputWrapper = newRightMini.querySelector('.input-wrapper');
+    const inputField = newRightMini.querySelector('.input-field');
+    const projNameText = newRightMini.querySelector('.proj-name .text');
+    const saveBtn = newRightMini.querySelector('.save-btn');
+
+    editBtn.addEventListener('click', () => {
+      projNameText.style.display = 'none'; // hide the original text
+      inputWrapper.style.display = 'inline-block'; // show the input field
+    });
+
+    saveBtn.addEventListener('click', () => {
+      const projectName = inputField.value;
+      projNameText.textContent = projectName; // set the text content of proj-name div
+      inputWrapper.style.display = 'none'; // hide the input field
+      projNameText.style.display = 'inline-block'; // show the new text
+    });
+  });
+
+  deleteMiniBtn.addEventListener('click', () => {
+    if (rightMinis.length > 0) {
+      const latestRightMini = rightMinis.pop(); // remove the last right-mini from the rightMinis array
+      latestRightMini.remove(); // remove the latest right-mini from the DOM
+    }
+  });
+</script>
