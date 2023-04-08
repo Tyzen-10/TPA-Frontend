@@ -311,7 +311,7 @@ padding:5px;
 }
 @media(max-width:1440px){
     .spa-graphbox{
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
     }
 }
 
@@ -361,14 +361,14 @@ padding:5px;
         flex-direction: row;
         gap: 1rem;
         background-color: transparent;
-        height: 100vh; /* set the height to the full viewport height */
+        height: auto; /* set the height to the full viewport height */
       }
 
       /* Set the left container to be one-fourth the width */
       .resume-main .left {
         flex-basis: 25%;
         background-color: lightblue;
-        display: grid;
+        /* display: grid; */
         grid-template-rows: 30% 25% 1fr 1fr ;
         padding: 10px;
       }
@@ -424,7 +424,7 @@ padding:5px;
       .resume-main .right {
         flex-basis: 75%;
         background-color: lightgray;
-        display: flex;
+        /* display: flex; */
         flex-direction: column;
         padding: 10px;
         gap: 1rem;
@@ -453,3 +453,4 @@ padding:5px;
         font-size: large;
         
       }
+/* after 5 april*/
