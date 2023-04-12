@@ -14,86 +14,85 @@
   <body>
     <h1 id="spa-heading" style="margin-top: 100px">Resume Builder</h1>
     <center>
-      <button onclick="window.print()" style="padding: 10px">
-        Print Resume
-      </button>
+      <button onclick="printDiv2()" style="padding: 10px">Print Resume</button>
     </center>
-    <div class="container resume-main">
-      <div class="left">
-        <div class="left-mini" id="profile-left-mini">
-          <div class="my-profile-pic">
-            <img src="/resources/EE2.jpg" alt="Profile pic" />
+    <div id="print-content">
+      <div class="container resume-main">
+        <div class="left">
+          <div class="left-mini" id="profile-left-mini">
+            <div class="my-profile-pic">
+              <img src="/resources/EE2.jpg" alt="Profile pic" />
+            </div>
+          </div>
+          <div class="left-mini">
+            <h2>Skills</h2>
+            <div style="display: inline">
+              <button id="add-skill-btn">Add Skill</button>
+              <button id="delete-skill-btn">Delete Skill</button>
+            </div>
+            <hr />
+            <div class="resume-skills">
+              <span class="badge bg-secondary badge-lg skill-tablet">HTML</span>
+              <span class="badge bg-secondary badge-lg skill-tablet"
+                >Bootstrap</span
+              >
+            </div>
+          </div>
+          <div class="left-mini">
+            <h2>Languages</h2>
+            <hr />
+            <div class="lang-name">English</div>
+            <div class="lang-name">Tamil</div>
+            <div class="lang-name">Hindi</div>
+          </div>
+          <div class="left-mini">
+            <h2>Interests</h2>
+            <div style="display: inline">
+              <button id="add-interest-btn">Add Interests</button>
+              <button id="delete-interest-btn">Delete Interests</button>
+            </div>
+            <hr />
+            <div class="resume-interest">
+              <span class="badge bg-secondary badge-lg skill-tablet">F1</span>
+
+              <span class="badge bg-secondary badge-lg skill-tablet"
+                >Music</span
+              >
+            </div>
           </div>
         </div>
-        <div class="left-mini">
-          <h2>Skills</h2>
-          <hr />
-          <div class="resume-skills">
-            <span class="badge bg-secondary badge-lg skill-tablet">HTML</span>
-            <span class="badge bg-secondary badge-lg skill-tablet">CSS</span>
-            <span class="badge bg-secondary badge-lg skill-tablet"
-              >JavaScript</span
-            >
-            <span class="badge bg-secondary badge-lg skill-tablet">Python</span>
-            <span class="badge bg-secondary badge-lg skill-tablet">Java</span>
-            <span class="badge bg-secondary badge-lg skill-tablet"
-              >Bootstrap</span
-            >
+        <div class="right">
+          <div class="right-rows">
+            <div class="right-name">Venkatesan RS</div>
+            <div class="right-role">Student</div>
+            <hr />
+            <div class="right-p">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Architecto quam assumenda animi deleniti sint magni cumque, neque
+              odit quas eius officiis est labore totam optio?
+            </div>
           </div>
-        </div>
-        <div class="left-mini">
-          <h2>Languages</h2>
-          <hr />
-          <div class="lang-name">English</div>
-          <div class="lang-name">Tamil</div>
-          <div class="lang-name">Hindi</div>
-        </div>
-        <div class="left-mini">
-          <h2>Interests</h2>
-          <hr />
-          <div class="resume-skills">
-            <span class="badge bg-secondary badge-lg skill-tablet">F1</span>
-            <span class="badge bg-secondary badge-lg skill-tablet">Typing</span>
-            <span class="badge bg-secondary badge-lg skill-tablet"
-              >Football</span
-            >
-            <span class="badge bg-secondary badge-lg skill-tablet"
-              >Cricket</span
-            >
-            <span class="badge bg-secondary badge-lg skill-tablet">Gym</span>
-            <span class="badge bg-secondary badge-lg skill-tablet">Music</span>
+          <div class="right-rows right-mini-2">
+            <h2>Educational Background</h2>
+            <button class="add-mini-btn-2">Add Project</button>
+            <button class="delete-mini-btn-2">Delete Latest Project</button>
+            <hr />
+            <div class="proj-mini"></div>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
+            distinctio ipsum numquam earum quo fuga totam provident magni
+            architecto excepturi, rem cumque dolore, est cum!
           </div>
-        </div>
-      </div>
-      <div class="right">
-        <div class="right-rows">
-          <div class="right-name">Venkatesan RS</div>
-          <div class="right-role">Student</div>
-          <hr />
-          <div class="right-p">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto
-            quam assumenda animi deleniti sint magni cumque, neque odit quas
-            eius officiis est labore totam optio?
+          <div class="right-rows right-mini">
+            <h2>Personal Projects</h2>
+            <button class="add-mini-btn">Add Project</button>
+            <button class="delete-mini-btn">Delete Latest Project</button>
+            <hr />
+            <!--new code for adding new sections-->
+            <div class="proj-mini"></div>
+            <!--code end for addding new sections-->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+            placeat.
           </div>
-        </div>
-        <div class="right-rows">
-          <h2>Educational Background</h2>
-          <hr />
-          <div class="proj-mini"></div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-          distinctio ipsum numquam earum quo fuga totam provident magni
-          architecto excepturi, rem cumque dolore, est cum!
-        </div>
-        <div class="right-rows right-mini">
-          <h2>Personal Projects</h2>
-          <button class="add-mini-btn">Add Project</button>
-          <button class="delete-mini-btn">Delete Latest Project</button>
-          <hr />
-          <!--new code for adding new sections-->
-          <div class="proj-mini"></div>
-          <!--code end for addding new sections-->
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-          placeat.
         </div>
       </div>
     </div>
